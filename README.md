@@ -104,7 +104,12 @@ Two main outputs are generated:
 Column descriptions:
 - `Genome`: Genome name
 - `Predefined_lineage_cluster`: Aforementioned predefined lineage cluster. Genomes which share a value here will have had pairwise SNVs calculated between them.
-- `time_weighted_SNV_cluster`: Time-weighted SNV cluster. Genomes which share a `time_weighted_SNV_cluster` are part of the same outbreak cluster. They will share both 
+- `time_weighted_SNV_cluster`: Time-weighted SNV cluster. Genomes which share a `time_weighted_SNV_cluster` are part of the same outbreak cluster. They will also share a `Predefined_lineage_cluster` value.
+
+In this case:
+- `PE23850` and `PE331288` are part of the same outbreak cluster `1` within `SL37`
+- `21P1095` and `21P1072` are part of the same outbreak cluster `3` within `SL23`
+- `PE15637` is the only genome in it's own outbreak cluster, despite being part of the same `SL37` lineage cluster as `PE23850` and `PE331288`
 
 ### pairwise_comparison_summary.tsv
 
