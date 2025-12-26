@@ -131,6 +131,15 @@ Column descriptions:
 - `ref_genome_size_Mb`: Reference genome size (Mb)
 - `query_genome_size_Mb`: Query genome size (Mb)
 
+
+## Requirements
+See [Installation](#installation) for specific instructions 
+- mamba/conda
+- kbo-cli=0.2.1
+- networkx=3.5
+- polars=1.33.1
+
+
 ## Citation
 To come
 
