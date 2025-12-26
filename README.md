@@ -1,2 +1,138 @@
 # time_weighted_SNV_clusterer
-Clusters genomes based off user-defined SNV parameters, taking into account the mutation rate over time
+Cluster genomes into Single Nucleotide Variant (SNV) outbreak clusters based on user-defined parameters, taking into account the mutation rate over time. SNV == SNP.
+
+## Motivation
+SNV or SNP analysis for detecting pathogen outbreaks often uses hard, defined SNV thresholds. This doesn't really make sense when considering the natural mutation rate of bacteria over time. `time_weighted_SNV_clusterer.py` seeks to address this, by taking into account yearly mutation rates, allowing users to define not only the `general_snvs_per_year`, but `lineage_specific_snvs_per_year` and `snvs_per_mb` thresholds. This information is used along with date of isolation for each genome and genome size, allowing more flexible SNV thresholds. 
+To save time, only comparisons between genomes of the same predefined lineage clusters are performed. Assign these any way you want (Sequence Type, cgMLST, MASH clusters, species etc.)
+
+## Installation
+```bash
+# Clone repository
+git clone https://github.com/bananabenana/time_weighted_SNV_clusterer
+
+# Move to directory
+cd time_weighted_SNV_clusterer
+
+# Use mamba (or optionally conda to install the required packages)
+mamba env create -f environment.yml
+
+# Activate environment
+mamba activate time_weighted_SNV_clusterer_env
+
+# Test installation
+python time_weighted_SNV_clusterer.py -h
+```
+
+## Quick usage
+Determine if 5x *Klebsiella pneumoniae* genomes are part of SNV outbreak clusters. See [Inputs](#inputs) for how these files should look.
+```bash
+python time_weighted_SNV_clusterer.py \
+  --manifest test_data/input/genome_manifest.txt \
+  --outdir test_data/output \
+  --snvs_per_mb 5 \
+  --general_snvs_per_year 3.8 \
+  --lineage_specific_snvs_per_year test_data/input/snvs_per_year_reference.txt \
+  --threads 4
+```
+
+Optionally get the .vcf outputs 
+```bash
+python time_weighted_SNV_clusterer.py \
+  --manifest test_data/input/genome_manifest.txt \
+  --outdir test_data/output \
+  --snvs_per_mb 5 \
+  --general_snvs_per_year 3.8 \
+  --lineage_specific_snvs_per_year test_data/input/snvs_per_year_reference.txt \
+  --threads 4 \
+  --vcf
+```
+
+## Inputs
+You want to provide the following:
+- `--manifest`: Takes a 4-column input file. See example `genome_manifest.txt` below
+- `--snvs_per_mb`: How many SNVs per megabases (Mb). Defaults to 5
+- `--general_snvs_per_year`: How many SNVs per year (generally) for the species you are trying to calculate outbreak SNV clusters for
+- `--lineage_specific_snvs_per_year`: Takes a 2-column input file. See example `snvs_per_year_reference.txt` below. Optional. Any `Predefined_lineage_cluster` not represented here will default to the `general_snvs_per_year` value
+
+### genome_manifest.txt
+
+| Genome   | Path                           | Predefined_lineage_cluster | Date       |
+| -------- | ------------------------------ | -------------------------- | ---------- |
+| PE23850  | test_data/input/PE23850.fasta  | SL37                       | 2023-01-24 |
+| PE331288 | test_data/input/PE331288.fasta | SL37                       | 2023-04-17 |
+| PE15637  | test_data/input/PE15637.fasta  | SL37                       | 2022-11-14 |
+| 21P1072  | test_data/input/21P1072.fasta  | SL23                       | 2021-09-09 |
+| 21P1095  | test_data/input/21P1095.fasta  | SL23                       | 2021-09-18 |
+
+Column descriptions:
+- `Genome`: Genome name
+- `Path`: Path to the genome fasta files
+- `Predefined_lineage_cluster`: Your predefined lineage clustering scheme. Can be Sequence Type (ST), sub-lineage, cgMLST, PopPUNK clonal group, species etc. Genomes which share a value here will be compared in a pairwise fashion and SNVs will be calculated between them.
+- `Date`: Date of isolation. Format: `YYYY-MM-DD`
+
+
+### snvs_per_year_reference.txt
+
+| Predefined_lineage_cluster | Predefined_SNVs_per_year |
+| -------------------------- | ------------------------ |
+| SL15                       | 4.9                      |
+| SL37                       | 4.8                      |
+| SL397                      | 4.1                      |
+| SL1944                     | 2.4                      |
+
+Column descriptions:
+- `Predefined_lineage_cluster`: Your predefined lineage clustering scheme. Can be Sequence Type (ST), sub-lineage, cgMLST, PopPUNK clonal group, species etc.
+- `Predefined_SNVs_per_year`: If there is a known number of SNVs/year for your `Predefined_lineage_cluster`. If a `Predefined_lineage_cluster` is not specified, the program will use the value from `--general_snvs_per_year`
+
+## Outputs
+
+Two main outputs are generated:
+- `time_weighted_SNV_clusters.tsv`: 3-column output which gives you discrete `time_weighted_SNV_cluster` values for each genome in longtable format.
+- `pairwise_comparison_summary.tsv`: A summary of each pairwise kbo output and calculations used to inform the `time_weighted_SNV_clusters.tsv`
+- `vcf` files for each pairwise comparison as generated by kbo. Optional.
+
+### time_weighted_SNV_clusters.tsv
+
+| Genome   | Predefined_lineage_cluster | time_weighted_SNV_cluster |
+| -------- | -------------------------- | ------------------------- |
+| PE23850  | SL37                       | 1                         |
+| PE331288 | SL37                       | 1                         |
+| PE15637  | SL37                       | 2                         |
+| 21P1095  | SL23                       | 3                         |
+| 21P1072  | SL23                       | 3                         |
+
+Column descriptions:
+- `Genome`: Genome name
+- `Predefined_lineage_cluster`: Aforementioned predefined lineage cluster. Genomes which share a value here will have had pairwise SNVs calculated between them.
+- `time_weighted_SNV_cluster`: Time-weighted SNV cluster. Genomes which share a `time_weighted_SNV_cluster` are part of the same outbreak cluster. They will share both 
+
+### pairwise_comparison_summary.tsv
+
+| ref_genome | query_genome | Predefined_lineage_cluster | SNVs | Indels | baseline_SNVs_per_Mb_value | time_weighted_SNV_upper_bound_value | years_apart | ref_genome_isolation_date | query_genome_isolation_date | config_snvs_per_mb | config_lineage_specific_snvs_per_year | ref_genome_size_Mb | query_genome_size_Mb |
+| ---------- | ------------ | -------------------------- | ---- | ------ | -------------------------- | ----------------------------------- | ----------- | ------------------------- | --------------------------- | ------------------ | ------------------------------------- | ------------------ | -------------------- |
+| PE23850 | PE15637 | SL37 | 829 | 29 | 27\.149140000000003 | 27\.15007305954826 | 0\.00019438740588637922 | 2023-01-24 | 2022-11-14 | 5\.0 | 4\.8 | 5\.405087 | 5\.454569 | 
+| PE331288 | PE15637 | SL37 | 557 | 21 | 26\.9142225 | 26\.916246319301848 | 0\.00042162902121834357 | 2023-04-17 | 2022-11-14 | 5\.0 | 4\.8 | 5\.31112 | 5\.454569 | 
+| PE23850 | PE331288 | SL37 | 18 | 0 | 26\.7905175 | 26\.791608259753595 | 0\.0002272416153319644 | 2023-01-24 | 2023-04-17 | 5\.0 | 4\.8 | 5\.405087 | 5\.31112 | 
+| 21P1072 | 21P1095 | SL23 | 12 | 3 | 28\.125642500000005 | 28\.125736134496925 | 0\.00002464065708418891 | 2021-09-09 | 2021-09-18 | 5\.0 | 3\.8 | 5\.625656 | 5\.624601 |
+
+Column descriptions:
+- `ref_genome`: Name of reference genome in the kbo SNV comparison
+- `query_genome`: Name of query genome in the kbo SNV comparison
+- `Predefined_lineage_cluster`: Aforementioned predefined lineage cluster
+- `SNVs`: Number of SNVs between `ref_genome` and `query_genome` as calculated by kbo. If this value is lower than `time_weighted_SNV_upper_bound_value` then genomes are considered part of the same outbreak cluster
+- `Indels`: Number of indels between `ref_genome` and `query_genome` as calculated by kbo
+- `baseline_SNVs_per_Mb_value`: Baseline number of SNVs per Mb, based on the size of the compared genomes and the `--snvs_per_mb` option
+- `time_weighted_SNV_upper_bound_value`: The upper bound of total SNVs between two genomes which could be considered to be part of the same outbreak cluster. Based on their `years_apart`, `config_lineage_specific_snvs_per_year` and `baseline_SNVs_per_Mb_value`
+- `years_apart`: Amount of time between isolation dates of compared genomes, in years
+- `ref_genome_isolation_date`: Reference genome isolation date
+- `query_genome_isolation_date`: Query genome isolation date
+- `config_snvs_per_mb`: The user-defined value provided to `--snvs_per_mb`
+- `config_lineage_specific_snvs_per_year`: The user-defined values provided to `--general_snvs_per_year` and/or `--lineage_specific_snvs_per_year`
+- `ref_genome_size_Mb`: Reference genome size (Mb)
+- `query_genome_size_Mb`: Query genome size (Mb)
+
+## Citation
+To come
+
+## Author
+Ben Vezina
