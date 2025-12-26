@@ -1,0 +1,678 @@
+##fileformat=VCFv4.4
+##contig=<ID=1,length=1073045>
+##contig=<ID=2,length=749310>
+##contig=<ID=3,length=474419>
+##contig=<ID=4,length=412694>
+##contig=<ID=5,length=376166>
+##contig=<ID=6,length=348751>
+##contig=<ID=7,length=331191>
+##contig=<ID=8,length=327859>
+##contig=<ID=9,length=211852>
+##contig=<ID=10,length=150209>
+##contig=<ID=11,length=135408>
+##contig=<ID=12,length=112820>
+##contig=<ID=13,length=103594>
+##contig=<ID=14,length=86338>
+##contig=<ID=15,length=76890>
+##contig=<ID=16,length=64928>
+##contig=<ID=17,length=34298>
+##contig=<ID=18,length=28824>
+##contig=<ID=19,length=26946>
+##contig=<ID=20,length=26057>
+##contig=<ID=21,length=22534>
+##contig=<ID=22,length=16847>
+##contig=<ID=23,length=16570>
+##contig=<ID=24,length=9219>
+##contig=<ID=25,length=8473>
+##contig=<ID=26,length=7703>
+##contig=<ID=27,length=7610>
+##contig=<ID=28,length=7568>
+##contig=<ID=29,length=7226>
+##contig=<ID=30,length=4959>
+##contig=<ID=31,length=4776>
+##contig=<ID=32,length=4686>
+##contig=<ID=33,length=4207>
+##contig=<ID=34,length=3168>
+##contig=<ID=35,length=2976>
+##contig=<ID=36,length=2901>
+##contig=<ID=37,length=2832>
+##contig=<ID=38,length=2811>
+##contig=<ID=39,length=2217>
+##contig=<ID=40,length=1420>
+##contig=<ID=41,length=1376>
+##contig=<ID=42,length=1338>
+##contig=<ID=43,length=1084>
+##contig=<ID=44,length=1022>
+##contig=<ID=45,length=699>
+##contig=<ID=46,length=660>
+##contig=<ID=47,length=607>
+##contig=<ID=48,length=522>
+##contig=<ID=49,length=477>
+##contig=<ID=50,length=474>
+##contig=<ID=51,length=468>
+##contig=<ID=52,length=468>
+##contig=<ID=53,length=463>
+##contig=<ID=54,length=455>
+##contig=<ID=55,length=453>
+##contig=<ID=56,length=452>
+##contig=<ID=57,length=433>
+##contig=<ID=58,length=425>
+##contig=<ID=59,length=398>
+##contig=<ID=60,length=371>
+##contig=<ID=61,length=338>
+##contig=<ID=62,length=326>
+##contig=<ID=63,length=276>
+##contig=<ID=64,length=273>
+##contig=<ID=65,length=252>
+##contig=<ID=66,length=240>
+##contig=<ID=67,length=228>
+##contig=<ID=68,length=222>
+##contig=<ID=69,length=222>
+##contig=<ID=70,length=218>
+##contig=<ID=71,length=212>
+##contig=<ID=72,length=184>
+##contig=<ID=73,length=184>
+##contig=<ID=74,length=182>
+##contig=<ID=75,length=165>
+##contig=<ID=76,length=158>
+##contig=<ID=77,length=157>
+##contig=<ID=78,length=157>
+##contig=<ID=79,length=155>
+##contig=<ID=80,length=154>
+##contig=<ID=81,length=153>
+##contig=<ID=82,length=152>
+##contig=<ID=83,length=146>
+##contig=<ID=84,length=144>
+##contig=<ID=85,length=144>
+##contig=<ID=86,length=143>
+##contig=<ID=87,length=138>
+##contig=<ID=88,length=134>
+##contig=<ID=89,length=130>
+##contig=<ID=90,length=130>
+##contig=<ID=91,length=129>
+##contig=<ID=92,length=117>
+##contig=<ID=93,length=109>
+##contig=<ID=94,length=101>
+##fileDate=20251226
+##source=kbo-cli v0.2.1
+##reference=test_data/input/PE331288.fasta
+##phasing=none
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	unknown
+1	11521	.	AGGGCGGGCAGCA	A	.	.	INDEL	GT	1
+1	49410	.	T	G	.	.	.	GT	1
+1	106919	.	A	T	.	.	.	GT	1
+1	118776	.	A	G	.	.	.	GT	1
+1	120823	.	T	G	.	.	.	GT	1
+1	128318	.	T	C	.	.	.	GT	1
+1	129979	.	T	C	.	.	.	GT	1
+1	151662	.	C	T	.	.	.	GT	1
+1	165694	.	T	G	.	.	.	GT	1
+1	192283	.	G	T	.	.	.	GT	1
+1	205054	.	T	G	.	.	.	GT	1
+1	207487	.	T	TT	.	.	INDEL	GT	1
+1	210508	.	A	C	.	.	.	GT	1
+1	224761	.	C	A	.	.	.	GT	1
+1	238265	.	A	G	.	.	.	GT	1
+1	243692	.	G	A	.	.	.	GT	1
+1	293948	.	A	T	.	.	.	GT	1
+1	294532	.	A	G	.	.	.	GT	1
+1	322051	.	A	G	.	.	.	GT	1
+1	335417	.	C	T	.	.	.	GT	1
+1	336734	.	T	A	.	.	.	GT	1
+1	341512	.	T	C	.	.	.	GT	1
+1	352042	.	G	A	.	.	.	GT	1
+1	352928	.	TT	T	.	.	INDEL	GT	1
+1	375532	.	A	G	.	.	.	GT	1
+1	376052	.	T	C	.	.	.	GT	1
+1	386582	.	C	T	.	.	.	GT	1
+1	399034	.	A	G	.	.	.	GT	1
+1	441762	.	G	A	.	.	.	GT	1
+1	442534	.	T	C	.	.	.	GT	1
+1	461113	.	A	C	.	.	.	GT	1
+1	465983	.	T	C	.	.	.	GT	1
+1	475443	.	G	A	.	.	.	GT	1
+1	479450	.	G	A	.	.	.	GT	1
+1	480494	.	C	T	.	.	.	GT	1
+1	500728	.	T	C	.	.	.	GT	1
+1	534566	.	A	G	.	.	.	GT	1
+1	603809	.	G	A	.	.	.	GT	1
+1	628669	.	T	C	.	.	.	GT	1
+1	629541	.	C	G	.	.	.	GT	1
+1	650382	.	G	A	.	.	.	GT	1
+1	673145	.	T	C	.	.	.	GT	1
+1	677538	.	T	C	.	.	.	GT	1
+1	677911	.	G	C	.	.	.	GT	1
+1	678148	.	T	C	.	.	.	GT	1
+1	683263	.	T	G	.	.	.	GT	1
+1	686641	.	T	C	.	.	.	GT	1
+1	703565	.	T	C	.	.	.	GT	1
+1	705170	.	C	T	.	.	.	GT	1
+1	711510	.	A	G	.	.	.	GT	1
+1	728194	.	A	G	.	.	.	GT	1
+1	734726	.	C	T	.	.	.	GT	1
+1	753421	.	A	G	.	.	.	GT	1
+1	774915	.	C	T	.	.	.	GT	1
+1	783616	.	G	A	.	.	.	GT	1
+1	786287	.	G	T	.	.	.	GT	1
+1	797333	.	T	G	.	.	.	GT	1
+1	808868	.	G	C	.	.	.	GT	1
+1	815202	.	G	T	.	.	.	GT	1
+1	815970	.	C	A	.	.	.	GT	1
+1	818336	.	C	A	.	.	.	GT	1
+1	821155	.	A	T	.	.	.	GT	1
+1	825095	.	G	GA	.	.	INDEL	GT	1
+1	827549	.	G	A	.	.	.	GT	1
+1	828067	.	A	G	.	.	.	GT	1
+1	833855	.	G	A	.	.	.	GT	1
+1	834066	.	A	C	.	.	.	GT	1
+1	836380	.	G	C	.	.	.	GT	1
+1	837295	.	A	G	.	.	.	GT	1
+1	844263	.	GG	G	.	.	INDEL	GT	1
+1	848388	.	A	C	.	.	.	GT	1
+1	874576	.	A	G	.	.	.	GT	1
+1	877482	.	C	T	.	.	.	GT	1
+1	908867	.	G	A	.	.	.	GT	1
+1	922229	.	G	T	.	.	.	GT	1
+1	997731	.	T	TTACCAGACGCTGCCAGCT	.	.	INDEL	GT	1
+1	1009640	.	G	GGTACCTACG	.	.	INDEL	GT	1
+1	1038615	.	A	G	.	.	.	GT	1
+1	1053654	.	G	T	.	.	.	GT	1
+1	1064557	.	C	T	.	.	.	GT	1
+2	30900	.	C	T	.	.	.	GT	1
+2	84351	.	G	C	.	.	.	GT	1
+2	125105	.	C	A	.	.	.	GT	1
+2	150149	.	G	A	.	.	.	GT	1
+2	151843	.	C	T	.	.	.	GT	1
+2	167115	.	G	A	.	.	.	GT	1
+2	193646	.	C	T	.	.	.	GT	1
+2	222984	.	C	T	.	.	.	GT	1
+2	303396	.	A	G	.	.	.	GT	1
+2	334146	.	T	C	.	.	.	GT	1
+2	336959	.	GTTCGTG	G	.	.	INDEL	GT	1
+2	340462	.	T	G	.	.	.	GT	1
+2	348822	.	A	G	.	.	.	GT	1
+2	372675	.	G	A	.	.	.	GT	1
+2	395174	.	C	T	.	.	.	GT	1
+2	427727	.	GG	G	.	.	INDEL	GT	1
+2	449575	.	C	T	.	.	.	GT	1
+2	479689	.	G	A	.	.	.	GT	1
+2	509781	.	C	T	.	.	.	GT	1
+2	534462	.	G	C	.	.	.	GT	1
+2	536939	.	T	C	.	.	.	GT	1
+2	549644	.	T	C	.	.	.	GT	1
+2	578060	.	A	G	.	.	.	GT	1
+2	582617	.	A	C	.	.	.	GT	1
+2	585807	.	C	T	.	.	.	GT	1
+2	586400	.	G	C	.	.	.	GT	1
+2	595988	.	T	C	.	.	.	GT	1
+2	609025	.	C	A	.	.	.	GT	1
+2	617207	.	G	T	.	.	.	GT	1
+2	662022	.	T	C	.	.	.	GT	1
+2	677386	.	C	T	.	.	.	GT	1
+2	680554	.	A	G	.	.	.	GT	1
+2	709509	.	T	C	.	.	.	GT	1
+2	742653	.	T	A	.	.	.	GT	1
+3	16285	.	GTTCTGG	G	.	.	INDEL	GT	1
+3	58676	.	T	C	.	.	.	GT	1
+3	60665	.	A	C	.	.	.	GT	1
+3	64190	.	G	A	.	.	.	GT	1
+3	92152	.	T	C	.	.	.	GT	1
+3	150140	.	A	G	.	.	.	GT	1
+3	161952	.	T	C	.	.	.	GT	1
+3	165553	.	C	G	.	.	.	GT	1
+3	173139	.	A	G	.	.	.	GT	1
+3	231647	.	T	C	.	.	.	GT	1
+3	232292	.	A	G	.	.	.	GT	1
+3	266408	.	G	A	.	.	.	GT	1
+3	268351	.	T	C	.	.	.	GT	1
+3	318895	.	A	G	.	.	.	GT	1
+3	341976	.	C	T	.	.	.	GT	1
+3	352820	.	A	C	.	.	.	GT	1
+3	378260	.	T	G	.	.	.	GT	1
+3	379400	.	A	G	.	.	.	GT	1
+3	385342	.	G	A	.	.	.	GT	1
+3	429252	.	A	G	.	.	.	GT	1
+3	451314	.	A	G	.	.	.	GT	1
+4	12376	.	A	G	.	.	.	GT	1
+4	42249	.	A	G	.	.	.	GT	1
+4	53225	.	A	T	.	.	.	GT	1
+4	60569	.	T	C	.	.	.	GT	1
+4	66519	.	C	T	.	.	.	GT	1
+4	185616	.	A	C	.	.	.	GT	1
+4	185886	.	T	C	.	.	.	GT	1
+4	272199	.	C	T	.	.	.	GT	1
+4	272376	.	G	A	.	.	.	GT	1
+4	360749	.	G	C	.	.	.	GT	1
+4	369442	.	C	T	.	.	.	GT	1
+4	380129	.	C	T	.	.	.	GT	1
+4	397917	.	A	C	.	.	.	GT	1
+4	404881	.	G	A	.	.	.	GT	1
+4	411019	.	A	G	.	.	.	GT	1
+5	4879	.	T	C	.	.	.	GT	1
+5	58614	.	G	C	.	.	.	GT	1
+5	65184	.	A	T	.	.	.	GT	1
+5	72901	.	A	G	.	.	.	GT	1
+5	103455	.	A	G	.	.	.	GT	1
+5	104068	.	T	C	.	.	.	GT	1
+5	132302	.	T	C	.	.	.	GT	1
+5	150020	.	G	C	.	.	.	GT	1
+5	160811	.	T	C	.	.	.	GT	1
+5	182974	.	C	G	.	.	.	GT	1
+5	183233	.	C	T	.	.	.	GT	1
+5	187908	.	T	C	.	.	.	GT	1
+5	190162	.	C	A	.	.	.	GT	1
+5	195249	.	C	T	.	.	.	GT	1
+5	212946	.	C	A	.	.	.	GT	1
+5	313870	.	G	T	.	.	.	GT	1
+5	326102	.	G	A	.	.	.	GT	1
+5	338204	.	G	A	.	.	.	GT	1
+5	343912	.	C	A	.	.	.	GT	1
+5	348083	.	GG	G	.	.	INDEL	GT	1
+5	370537	.	T	A	.	.	.	GT	1
+5	375917	.	A	G	.	.	.	GT	1
+6	11244	.	C	T	.	.	.	GT	1
+6	19550	.	A	C	.	.	.	GT	1
+6	36852	.	T	G	.	.	.	GT	1
+6	44954	.	A	C	.	.	.	GT	1
+6	87286	.	T	C	.	.	.	GT	1
+6	101637	.	A	G	.	.	.	GT	1
+6	117374	.	A	G	.	.	.	GT	1
+6	166138	.	C	T	.	.	.	GT	1
+6	173888	.	G	T	.	.	.	GT	1
+6	181549	.	A	G	.	.	.	GT	1
+6	200039	.	G	C	.	.	.	GT	1
+6	239387	.	G	A	.	.	.	GT	1
+6	249901	.	A	G	.	.	.	GT	1
+6	260613	.	C	T	.	.	.	GT	1
+6	266785	.	T	A	.	.	.	GT	1
+6	267509	.	G	A	.	.	.	GT	1
+6	275892	.	A	G	.	.	.	GT	1
+7	5534	.	C	T	.	.	.	GT	1
+7	8568	.	G	T	.	.	.	GT	1
+7	9810	.	C	T	.	.	.	GT	1
+7	25540	.	A	T	.	.	.	GT	1
+7	63037	.	T	C	.	.	.	GT	1
+7	63114	.	C	A	.	.	.	GT	1
+7	63492	.	T	G	.	.	.	GT	1
+7	63738	.	T	C	.	.	.	GT	1
+7	63879	.	T	G	.	.	.	GT	1
+7	64381	.	A	G	.	.	.	GT	1
+7	64414	.	C	T	.	.	.	GT	1
+7	64699	.	G	C	.	.	.	GT	1
+7	65209	.	C	T	.	.	.	GT	1
+7	65467	.	C	T	.	.	.	GT	1
+7	65587	.	A	C	.	.	.	GT	1
+7	65680	.	T	C	.	.	.	GT	1
+7	65875	.	C	T	.	.	.	GT	1
+7	66238	.	G	C	.	.	.	GT	1
+7	66274	.	G	A	.	.	.	GT	1
+7	66454	.	T	C	.	.	.	GT	1
+7	66484	.	A	G	.	.	.	GT	1
+7	66589	.	C	T	.	.	.	GT	1
+7	66866	.	C	A	.	.	.	GT	1
+7	67007	.	A	G	.	.	.	GT	1
+7	67201	.	C	T	.	.	.	GT	1
+7	67345	.	G	C	.	.	.	GT	1
+7	67717	.	C	T	.	.	.	GT	1
+7	67789	.	T	C	.	.	.	GT	1
+7	67843	.	G	A	.	.	.	GT	1
+7	67894	.	A	G	.	.	.	GT	1
+7	67971	.	G	A	.	.	.	GT	1
+7	68107	.	T	C	.	.	.	GT	1
+7	68353	.	G	A	.	.	.	GT	1
+7	68506	.	CC	C	.	.	INDEL	GT	1
+7	68532	.	T	C	.	.	.	GT	1
+7	68666	.	C	CGTGTGGC	.	.	INDEL	GT	1
+7	68792	.	T	C	.	.	.	GT	1
+7	69055	.	T	C	.	.	.	GT	1
+7	69087	.	G	A	.	.	.	GT	1
+7	69301	.	G	A	.	.	.	GT	1
+7	69376	.	G	C	.	.	.	GT	1
+7	69433	.	G	A	.	.	.	GT	1
+7	69766	.	T	C	.	.	.	GT	1
+7	69831	.	G	A	.	.	.	GT	1
+7	69922	.	A	G	.	.	.	GT	1
+7	70342	.	G	A	.	.	.	GT	1
+7	70408	.	C	T	.	.	.	GT	1
+7	70522	.	C	T	.	.	.	GT	1
+7	70612	.	T	G	.	.	.	GT	1
+7	70697	.	A	G	.	.	.	GT	1
+7	70809	.	T	A	.	.	.	GT	1
+7	70984	.	T	C	.	.	.	GT	1
+7	70986	.	G	A	.	.	.	GT	1
+7	71027	.	A	C	.	.	.	GT	1
+7	71215	.	T	C	.	.	.	GT	1
+7	71487	.	C	T	.	.	.	GT	1
+7	71574	.	G	A	.	.	.	GT	1
+7	71694	.	T	C	.	.	.	GT	1
+7	71781	.	T	C	.	.	.	GT	1
+7	71961	.	A	G	.	.	.	GT	1
+7	71994	.	A	G	.	.	.	GT	1
+7	72075	.	T	G	.	.	.	GT	1
+7	72254	.	T	C	.	.	.	GT	1
+7	72375	.	A	G	.	.	.	GT	1
+7	72587	.	A	T	.	.	.	GT	1
+7	72617	.	A	C	.	.	.	GT	1
+7	72725	.	C	T	.	.	.	GT	1
+7	72947	.	A	G	.	.	.	GT	1
+7	73190	.	T	C	.	.	.	GT	1
+7	73393	.	G	C	.	.	.	GT	1
+7	73553	.	T	C	.	.	.	GT	1
+7	73660	.	G	T	.	.	.	GT	1
+7	73688	.	C	T	.	.	.	GT	1
+7	73732	.	A	AA	.	.	INDEL	GT	1
+7	73806	.	T	C	.	.	.	GT	1
+7	73808	.	T	C	.	.	.	GT	1
+7	74033	.	A	AA	.	.	INDEL	GT	1
+7	74098	.	G	C	.	.	.	GT	1
+7	74202	.	A	C	.	.	.	GT	1
+7	74310	.	G	C	.	.	.	GT	1
+7	74622	.	T	C	.	.	.	GT	1
+7	74850	.	C	T	.	.	.	GT	1
+7	74946	.	T	G	.	.	.	GT	1
+7	75054	.	A	C	.	.	.	GT	1
+7	75474	.	C	G	.	.	.	GT	1
+7	75525	.	G	T	.	.	.	GT	1
+7	94020	.	G	T	.	.	.	GT	1
+7	94281	.	T	C	.	.	.	GT	1
+7	94785	.	C	T	.	.	.	GT	1
+7	94848	.	T	C	.	.	.	GT	1
+7	95033	.	C	T	.	.	.	GT	1
+7	95556	.	C	T	.	.	.	GT	1
+7	95592	.	C	G	.	.	.	GT	1
+7	95633	.	A	G	.	.	.	GT	1
+7	95683	.	G	T	.	.	.	GT	1
+7	95845	.	A	T	.	.	.	GT	1
+7	96283	.	G	C	.	.	.	GT	1
+7	96628	.	A	G	.	.	.	GT	1
+7	96763	.	A	G	.	.	.	GT	1
+7	96793	.	A	G	.	.	.	GT	1
+7	96843	.	G	A	.	.	.	GT	1
+7	110209	.	T	C	.	.	.	GT	1
+7	110293	.	G	A	.	.	.	GT	1
+7	110392	.	A	C	.	.	.	GT	1
+7	110434	.	G	A	.	.	.	GT	1
+7	110485	.	C	G	.	.	.	GT	1
+7	110486	.	A	T	.	.	.	GT	1
+7	110652	.	A	G	.	.	.	GT	1
+7	110679	.	A	G	.	.	.	GT	1
+7	110901	.	G	A	.	.	.	GT	1
+7	110943	.	A	G	.	.	.	GT	1
+7	111210	.	A	G	.	.	.	GT	1
+7	111389	.	A	G	.	.	.	GT	1
+7	111482	.	G	A	.	.	.	GT	1
+7	111623	.	T	C	.	.	.	GT	1
+7	111758	.	G	A	.	.	.	GT	1
+7	111851	.	C	G	.	.	.	GT	1
+7	111887	.	C	T	.	.	.	GT	1
+7	112141	.	G	A	.	.	.	GT	1
+7	112198	.	A	G	.	.	.	GT	1
+7	112353	.	C	G	.	.	.	GT	1
+7	112572	.	C	T	.	.	.	GT	1
+7	112659	.	C	T	.	.	.	GT	1
+7	112959	.	G	A	.	.	.	GT	1
+7	112995	.	A	G	.	.	.	GT	1
+7	113136	.	A	G	.	.	.	GT	1
+7	113229	.	A	G	.	.	.	GT	1
+7	113367	.	A	G	.	.	.	GT	1
+7	113532	.	G	A	.	.	.	GT	1
+7	113798	.	C	T	.	.	.	GT	1
+7	113800	.	A	G	.	.	.	GT	1
+7	113873	.	A	G	.	.	.	GT	1
+7	114013	.	G	C	.	.	.	GT	1
+7	114200	.	G	C	.	.	.	GT	1
+7	114365	.	T	C	.	.	.	GT	1
+7	114569	.	A	G	.	.	.	GT	1
+7	114632	.	C	T	.	.	.	GT	1
+7	115033	.	G	A	.	.	.	GT	1
+7	115150	.	A	G	.	.	.	GT	1
+7	115189	.	G	A	.	.	.	GT	1
+7	115318	.	A	G	.	.	.	GT	1
+7	115357	.	G	C	.	.	.	GT	1
+7	115450	.	G	A	.	.	.	GT	1
+7	115555	.	T	C	.	.	.	GT	1
+7	115557	.	A	G	.	.	.	GT	1
+7	115885	.	C	A	.	.	.	GT	1
+7	116020	.	C	G	.	.	.	GT	1
+7	116233	.	A	G	.	.	.	GT	1
+7	116419	.	A	G	.	.	.	GT	1
+7	116491	.	A	G	.	.	.	GT	1
+7	117386	.	C	T	.	.	.	GT	1
+7	117471	.	C	T	.	.	.	GT	1
+7	117735	.	G	T	.	.	.	GT	1
+7	117792	.	T	C	.	.	.	GT	1
+7	117846	.	G	A	.	.	.	GT	1
+7	118140	.	G	A	.	.	.	GT	1
+7	118631	.	T	C	.	.	.	GT	1
+7	118709	.	A	G	.	.	.	GT	1
+7	119204	.	A	G	.	.	.	GT	1
+7	119631	.	T	C	.	.	.	GT	1
+7	119992	.	C	T	.	.	.	GT	1
+7	120105	.	G	T	.	.	.	GT	1
+7	120375	.	G	T	.	.	.	GT	1
+7	120435	.	T	C	.	.	.	GT	1
+7	120591	.	G	A	.	.	.	GT	1
+7	120657	.	T	C	.	.	.	GT	1
+7	120732	.	C	T	.	.	.	GT	1
+7	121083	.	C	T	.	.	.	GT	1
+7	121321	.	T	C	.	.	.	GT	1
+7	121347	.	G	C	.	.	.	GT	1
+7	122008	.	T	C	.	.	.	GT	1
+7	122218	.	C	T	.	.	.	GT	1
+7	122220	.	C	A	.	.	.	GT	1
+7	122278	.	T	C	.	.	.	GT	1
+7	122305	.	A	G	.	.	.	GT	1
+7	122386	.	G	A	.	.	.	GT	1
+7	122419	.	G	C	.	.	.	GT	1
+7	122468	.	C	T	.	.	.	GT	1
+7	122632	.	T	C	.	.	.	GT	1
+7	122716	.	T	C	.	.	.	GT	1
+7	122992	.	C	T	.	.	.	GT	1
+7	123355	.	A	G	.	.	.	GT	1
+7	123356	.	A	G	.	.	.	GT	1
+7	123532	.	G	T	.	.	.	GT	1
+7	123730	.	G	A	.	.	.	GT	1
+7	123731	.	T	C	.	.	.	GT	1
+7	123918	.	C	T	.	.	.	GT	1
+7	123984	.	G	A	.	.	.	GT	1
+7	124668	.	T	C	.	.	.	GT	1
+7	125151	.	A	G	.	.	.	GT	1
+7	125801	.	T	C	.	.	.	GT	1
+7	125969	.	C	T	.	.	.	GT	1
+7	126161	.	G	C	.	.	.	GT	1
+7	126191	.	A	G	.	.	.	GT	1
+7	127132	.	C	T	.	.	.	GT	1
+7	127272	.	T	C	.	.	.	GT	1
+7	127461	.	C	T	.	.	.	GT	1
+7	149829	.	G	A	.	.	.	GT	1
+7	159906	.	G	T	.	.	.	GT	1
+7	185273	.	C	A	.	.	.	GT	1
+7	188013	.	G	C	.	.	.	GT	1
+7	226439	.	T	C	.	.	.	GT	1
+7	228709	.	G	A	.	.	.	GT	1
+7	229845	.	A	G	.	.	.	GT	1
+7	248154	.	C	T	.	.	.	GT	1
+7	257547	.	C	A	.	.	.	GT	1
+7	262377	.	A	G	.	.	.	GT	1
+7	317608	.	A	G	.	.	.	GT	1
+7	320010	.	G	A	.	.	.	GT	1
+8	19621	.	T	A	.	.	.	GT	1
+8	35112	.	G	C	.	.	.	GT	1
+8	46489	.	C	T	.	.	.	GT	1
+8	65702	.	T	C	.	.	.	GT	1
+8	90319	.	T	C	.	.	.	GT	1
+8	130700	.	A	G	.	.	.	GT	1
+8	144049	.	G	A	.	.	.	GT	1
+8	158831	.	A	C	.	.	.	GT	1
+8	193447	.	G	A	.	.	.	GT	1
+8	217225	.	C	T	.	.	.	GT	1
+8	221947	.	T	G	.	.	.	GT	1
+8	222172	.	A	G	.	.	.	GT	1
+8	232701	.	G	A	.	.	.	GT	1
+8	235789	.	A	G	.	.	.	GT	1
+8	250226	.	A	G	.	.	.	GT	1
+8	262181	.	G	T	.	.	.	GT	1
+8	268569	.	G	A	.	.	.	GT	1
+8	296190	.	T	G	.	.	.	GT	1
+9	18064	.	G	A	.	.	.	GT	1
+9	73767	.	T	C	.	.	.	GT	1
+9	142530	.	T	C	.	.	.	GT	1
+9	158419	.	T	G	.	.	.	GT	1
+9	178868	.	G	A	.	.	.	GT	1
+9	179332	.	T	C	.	.	.	GT	1
+9	179494	.	G	C	.	.	.	GT	1
+9	186689	.	A	T	.	.	.	GT	1
+9	199563	.	T	C	.	.	.	GT	1
+9	199696	.	T	C	.	.	.	GT	1
+10	42013	.	C	T	.	.	.	GT	1
+10	69713	.	G	A	.	.	.	GT	1
+10	143417	.	G	A	.	.	.	GT	1
+10	150080	.	G	T	.	.	.	GT	1
+11	8938	.	A	G	.	.	.	GT	1
+11	58984	.	C	T	.	.	.	GT	1
+11	66040	.	T	C	.	.	.	GT	1
+11	66800	.	T	C	.	.	.	GT	1
+11	106183	.	T	G	.	.	.	GT	1
+11	113762	.	T	C	.	.	.	GT	1
+11	126924	.	A	T	.	.	.	GT	1
+11	130935	.	C	T	.	.	.	GT	1
+12	16441	.	C	T	.	.	.	GT	1
+12	25038	.	C	A	.	.	.	GT	1
+12	43282	.	G	T	.	.	.	GT	1
+12	44907	.	A	T	.	.	.	GT	1
+12	47412	.	C	T	.	.	.	GT	1
+12	68314	.	T	C	.	.	.	GT	1
+12	70624	.	A	G	.	.	.	GT	1
+12	75124	.	A	G	.	.	.	GT	1
+12	96565	.	G	T	.	.	.	GT	1
+12	105983	.	G	A	.	.	.	GT	1
+13	16362	.	G	A	.	.	.	GT	1
+13	34499	.	G	A	.	.	.	GT	1
+13	39938	.	G	A	.	.	.	GT	1
+13	53264	.	C	T	.	.	.	GT	1
+13	65219	.	C	T	.	.	.	GT	1
+13	84266	.	G	A	.	.	.	GT	1
+14	18761	.	T	C	.	.	.	GT	1
+14	39631	.	C	A	.	.	.	GT	1
+14	59252	.	C	A	.	.	.	GT	1
+16	17691	.	A	G	.	.	.	GT	1
+16	28919	.	A	G	.	.	.	GT	1
+16	30197	.	G	T	.	.	.	GT	1
+16	44919	.	T	C	.	.	.	GT	1
+16	48636	.	TT	T	.	.	INDEL	GT	1
+18	9684	.	T	C	.	.	.	GT	1
+18	9895	.	A	AGGAAA	.	.	INDEL	GT	1
+18	9925	.	G	A	.	.	.	GT	1
+18	9926	.	T	C	.	.	.	GT	1
+18	11917	.	G	T	.	.	.	GT	1
+18	11959	.	C	T	.	.	.	GT	1
+18	12131	.	G	T	.	.	.	GT	1
+18	13063	.	C	T	.	.	.	GT	1
+18	13366	.	T	C	.	.	.	GT	1
+18	13367	.	C	T	.	.	.	GT	1
+18	13734	.	T	C	.	.	.	GT	1
+18	13812	.	C	A	.	.	.	GT	1
+18	14162	.	G	T	.	.	.	GT	1
+18	22563	.	G	T	.	.	.	GT	1
+18	28568	.	C	CGCC	.	.	INDEL	GT	1
+18	28682	.	G	T	.	.	.	GT	1
+19	25	.	C	T	.	.	.	GT	1
+19	184	.	A	G	.	.	.	GT	1
+19	421	.	A	G	.	.	.	GT	1
+19	565	.	A	G	.	.	.	GT	1
+19	800	.	A	G	.	.	.	GT	1
+19	1456	.	T	A	.	.	.	GT	1
+19	2005	.	G	T	.	.	.	GT	1
+19	2132	.	A	T	.	.	.	GT	1
+21	5952	.	C	A	.	.	.	GT	1
+21	7283	.	A	G	.	.	.	GT	1
+21	13724	.	A	G	.	.	.	GT	1
+21	13763	.	G	A	.	.	.	GT	1
+21	14057	.	A	G	.	.	.	GT	1
+21	17218	.	T	G	.	.	.	GT	1
+21	17305	.	C	T	.	.	.	GT	1
+21	17386	.	C	T	.	.	.	GT	1
+21	17548	.	T	A	.	.	.	GT	1
+21	17549	.	C	T	.	.	.	GT	1
+21	17891	.	A	G	.	.	.	GT	1
+21	17949	.	T	C	.	.	.	GT	1
+21	18072	.	A	C	.	.	.	GT	1
+21	18117	.	G	A	.	.	.	GT	1
+21	18234	.	C	T	.	.	.	GT	1
+21	18340	.	G	A	.	.	.	GT	1
+21	18375	.	T	A	.	.	.	GT	1
+21	18429	.	C	T	.	.	.	GT	1
+21	18541	.	T	C	.	.	.	GT	1
+21	18693	.	T	C	.	.	.	GT	1
+21	18742	.	C	T	.	.	.	GT	1
+21	18804	.	T	C	.	.	.	GT	1
+21	18934	.	G	T	.	.	.	GT	1
+21	20742	.	C	T	.	.	.	GT	1
+21	22439	.	A	G	.	.	.	GT	1
+21	22484	.	A	G	.	.	.	GT	1
+22	234	.	T	C	.	.	.	GT	1
+22	309	.	T	C	.	.	.	GT	1
+22	356	.	T	A	.	.	.	GT	1
+22	525	.	T	C	.	.	.	GT	1
+22	563	.	C	T	.	.	.	GT	1
+22	627	.	G	A	.	.	.	GT	1
+22	629	.	T	C	.	.	.	GT	1
+22	10803	.	C	T	.	.	.	GT	1
+22	10890	.	T	A	.	.	.	GT	1
+22	10947	.	C	G	.	.	.	GT	1
+22	11515	.	A	C	.	.	.	GT	1
+22	11585	.	A	G	.	.	.	GT	1
+22	11716	.	T	C	.	.	.	GT	1
+22	12403	.	T	G	.	.	.	GT	1
+22	12617	.	A	G	.	.	.	GT	1
+22	12652	.	A	C	.	.	.	GT	1
+22	12691	.	G	C	.	.	.	GT	1
+22	12922	.	G	T	.	.	.	GT	1
+22	13117	.	G	A	.	.	.	GT	1
+22	14066	.	G	T	.	.	.	GT	1
+22	14118	.	C	T	.	.	.	GT	1
+22	14295	.	A	G	.	.	.	GT	1
+22	14296	.	C	T	.	.	.	GT	1
+22	14553	.	C	T	.	.	.	GT	1
+22	14650	.	A	T	.	.	.	GT	1
+22	14814	.	A	C	.	.	.	GT	1
+23	1518	.	T	G	.	.	.	GT	1
+23	1578	.	T	TT	.	.	INDEL	GT	1
+23	1770	.	A	G	.	.	.	GT	1
+23	1772	.	C	T	.	.	.	GT	1
+23	1955	.	C	T	.	.	.	GT	1
+23	1980	.	C	T	.	.	.	GT	1
+23	2035	.	T	A	.	.	.	GT	1
+23	2037	.	T	G	.	.	.	GT	1
+23	2584	.	A	G	.	.	.	GT	1
+23	7661	.	A	G	.	.	.	GT	1
+23	14037	.	G	C	.	.	.	GT	1
+23	14403	.	T	G	.	.	.	GT	1
+23	14514	.	T	C	.	.	.	GT	1
+23	14589	.	A	G	.	.	.	GT	1
+23	14735	.	G	A	.	.	.	GT	1
+23	14852	.	C	T	.	.	.	GT	1
+23	14854	.	T	C	.	.	.	GT	1
+23	15116	.	T	C	.	.	.	GT	1
+23	15401	.	C	T	.	.	.	GT	1
+23	16168	.	T	C	.	.	.	GT	1
+26	4144	.	C	A	.	.	.	GT	1
+26	4404	.	C	T	.	.	.	GT	1
+28	7365	.	A	C	.	.	.	GT	1
+29	6121	.	T	C	.	.	.	GT	1
+30	4330	.	T	C	.	.	.	GT	1
+30	4331	.	A	G	.	.	.	GT	1
+30	4423	.	T	C	.	.	.	GT	1
+35	543	.	C	T	.	.	.	GT	1
+37	275	.	T	C	.	.	.	GT	1
+37	526	.	A	G	.	.	.	GT	1
+40	1343	.	G	T	.	.	.	GT	1
+41	235	.	C	A	.	.	.	GT	1
+41	335	.	A	G	.	.	.	GT	1
+41	386	.	C	T	.	.	.	GT	1
+41	596	.	C	T	.	.	.	GT	1
+41	764	.	G	T	.	.	.	GT	1
+48	148	.	C	CGCGC	.	.	INDEL	GT	1
+48	472	.	G	A	.	.	.	GT	1
+52	184	.	C	A	.	.	.	GT	1
+82	107	.	G	GCGGGATAAG	.	.	INDEL	GT	1

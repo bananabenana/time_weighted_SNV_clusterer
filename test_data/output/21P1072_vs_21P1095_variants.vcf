@@ -1,0 +1,110 @@
+##fileformat=VCFv4.4
+##contig=<ID=1,length=897387>
+##contig=<ID=2,length=886271>
+##contig=<ID=3,length=749676>
+##contig=<ID=4,length=371391>
+##contig=<ID=5,length=290875>
+##contig=<ID=6,length=289156>
+##contig=<ID=7,length=272064>
+##contig=<ID=8,length=247714>
+##contig=<ID=9,length=234483>
+##contig=<ID=10,length=230403>
+##contig=<ID=11,length=193045>
+##contig=<ID=12,length=151068>
+##contig=<ID=13,length=134004>
+##contig=<ID=14,length=103770>
+##contig=<ID=15,length=99296>
+##contig=<ID=16,length=86239>
+##contig=<ID=17,length=82841>
+##contig=<ID=18,length=68097>
+##contig=<ID=19,length=59299>
+##contig=<ID=20,length=34421>
+##contig=<ID=21,length=25350>
+##contig=<ID=22,length=19803>
+##contig=<ID=23,length=17929>
+##contig=<ID=24,length=16890>
+##contig=<ID=25,length=15426>
+##contig=<ID=26,length=4915>
+##contig=<ID=27,length=4632>
+##contig=<ID=28,length=4610>
+##contig=<ID=29,length=4405>
+##contig=<ID=30,length=3651>
+##contig=<ID=31,length=1996>
+##contig=<ID=32,length=1847>
+##contig=<ID=33,length=1846>
+##contig=<ID=34,length=1728>
+##contig=<ID=35,length=1533>
+##contig=<ID=36,length=1445>
+##contig=<ID=37,length=1359>
+##contig=<ID=38,length=1224>
+##contig=<ID=39,length=971>
+##contig=<ID=40,length=858>
+##contig=<ID=41,length=774>
+##contig=<ID=42,length=700>
+##contig=<ID=43,length=675>
+##contig=<ID=44,length=660>
+##contig=<ID=45,length=532>
+##contig=<ID=46,length=426>
+##contig=<ID=47,length=415>
+##contig=<ID=48,length=415>
+##contig=<ID=49,length=368>
+##contig=<ID=50,length=326>
+##contig=<ID=51,length=295>
+##contig=<ID=52,length=273>
+##contig=<ID=53,length=268>
+##contig=<ID=54,length=255>
+##contig=<ID=55,length=247>
+##contig=<ID=56,length=212>
+##contig=<ID=57,length=211>
+##contig=<ID=58,length=191>
+##contig=<ID=59,length=188>
+##contig=<ID=60,length=187>
+##contig=<ID=61,length=176>
+##contig=<ID=62,length=171>
+##contig=<ID=63,length=169>
+##contig=<ID=64,length=165>
+##contig=<ID=65,length=164>
+##contig=<ID=66,length=162>
+##contig=<ID=67,length=161>
+##contig=<ID=68,length=160>
+##contig=<ID=69,length=160>
+##contig=<ID=70,length=160>
+##contig=<ID=71,length=159>
+##contig=<ID=72,length=156>
+##contig=<ID=73,length=153>
+##contig=<ID=74,length=150>
+##contig=<ID=75,length=147>
+##contig=<ID=76,length=140>
+##contig=<ID=77,length=134>
+##contig=<ID=78,length=134>
+##contig=<ID=79,length=130>
+##contig=<ID=80,length=130>
+##contig=<ID=81,length=127>
+##contig=<ID=82,length=127>
+##contig=<ID=83,length=127>
+##contig=<ID=84,length=115>
+##contig=<ID=85,length=115>
+##contig=<ID=86,length=110>
+##contig=<ID=87,length=110>
+##contig=<ID=88,length=104>
+##contig=<ID=89,length=104>
+##fileDate=20251226
+##source=kbo-cli v0.2.1
+##reference=test_data/input/21P1072.fasta
+##phasing=none
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	unknown
+1	314074	.	A	T	.	.	.	GT	1
+1	605559	.	G	GA	.	.	INDEL	GT	1
+1	623892	.	C	T	.	.	.	GT	1
+2	30633	.	C	G	.	.	.	GT	1
+2	373522	.	T	G	.	.	.	GT	1
+2	449032	.	C	A	.	.	.	GT	1
+2	500768	.	C	G	.	.	.	GT	1
+3	55598	.	C	A	.	.	.	GT	1
+3	139667	.	T	G	.	.	.	GT	1
+6	86310	.	A	T	.	.	.	GT	1
+6	206743	.	T	A	.	.	.	GT	1
+6	254115	.	A	T	.	.	.	GT	1
+8	47341	.	A	T	.	.	.	GT	1
+12	116997	.	C	CA	.	.	INDEL	GT	1
+12	126718	.	AA	A	.	.	INDEL	GT	1

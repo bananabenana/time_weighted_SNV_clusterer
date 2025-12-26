@@ -1,0 +1,8 @@
+name: time_weighted_SNV_clusterer_env
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - kbo-cli=0.2.1
+  - networkx=3.5
+  - polars=1.33.1

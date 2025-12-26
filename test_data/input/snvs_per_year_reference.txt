@@ -1,0 +1,5 @@
+Predefined_lineage_cluster	Predefined_SNVs_per_year
+SL15	4.9
+SL37	4.8
+SL397	4.1
+SL1944	2.4

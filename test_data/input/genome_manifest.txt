@@ -1,0 +1,6 @@
+Genome	Path	Predefined_lineage_cluster	Date
+PE23850	test_data/input/PE23850.fasta	SL37	2023-01-24
+PE331288	test_data/input/PE331288.fasta	SL37	2023-04-17
+PE15637	test_data/input/PE15637.fasta	SL37	2022-11-14
+21P1072	test_data/input/21P1072.fasta	SL23	2021-09-09
+21P1095	test_data/input/21P1095.fasta	SL23	2021-09-18
