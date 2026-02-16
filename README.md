@@ -2,8 +2,9 @@
 Cluster genomes into Single Nucleotide Variant (SNV) outbreak clusters based on user-defined parameters, taking into account the mutation rate over time. SNV == SNP.
 
 ## Motivation
-SNV or SNP analysis for detecting pathogen outbreaks often uses hard, defined SNV thresholds. This doesn't really make sense when considering the natural mutation rate of bacteria over time. `time_weighted_SNV_clusterer.py` seeks to address this, by taking into account yearly mutation rates, allowing users to define not only the `general_snvs_per_year`, but `lineage_specific_snvs_per_year` and `snvs_per_mb` thresholds. This information is used along with date of isolation for each genome and genome size, allowing more flexible SNV thresholds. 
-To save time, only comparisons between genomes of the same predefined lineage clusters are performed. Assign these any way you want (Sequence Type, cgMLST, MASH clusters, species etc.)
+SNV or SNP analysis for detecting pathogen outbreaks often uses hard, defined SNV thresholds. This doesn't really make sense when considering the natural mutation rate of bacteria over time. `time_weighted_SNV_clusterer.py` seeks to address this, by taking into account yearly mutation rates, allowing users to define not only the `general_snvs_per_year`, but `lineage_specific_snvs_per_year` and `snvs_per_mb` thresholds. This information is used along with date of isolation for each genome and genome size, allowing more flexible SNV thresholds. This is optional however - dates and mutations over time can be ignored.
+
+To save time, only comparisons between genomes of the same predefined lineage clusters are performed. Assign these any way you want (Sequence Type, cgMLST, MASH clusters, species etc.). The tool also performs a pre-filtering all-vs-all single-linkage step using MASH to reduce the number of pairs to be handled by kbo.
 
 ## Installation
 ```bash
@@ -30,6 +31,7 @@ python time_weighted_SNV_clusterer.py \
   --manifest test_data/input/genome_manifest.txt \
   --outdir test_data/output \
   --snvs_per_mb 5 \
+  --mash_threshold 0.0006 \
   --general_snvs_per_year 3.8 \
   --lineage_specific_snvs_per_year test_data/input/snvs_per_year_reference.txt \
   --threads 4
@@ -41,6 +43,7 @@ python time_weighted_SNV_clusterer.py \
   --manifest test_data/input/genome_manifest.txt \
   --outdir test_data/output \
   --snvs_per_mb 5 \
+  --mash_threshold 0.0006 \
   --general_snvs_per_year 3.8 \
   --lineage_specific_snvs_per_year test_data/input/snvs_per_year_reference.txt \
   --threads 4 \
@@ -50,9 +53,10 @@ python time_weighted_SNV_clusterer.py \
 ## Inputs
 You want to provide the following:
 - `--manifest`: Takes a 4-column input file. See example `genome_manifest.txt` below
-- `--snvs_per_mb`: How many SNVs per megabases (Mb). Defaults to 5
-- `--general_snvs_per_year`: How many SNVs per year (generally) for the species you are trying to calculate outbreak SNV clusters for
-- `--lineage_specific_snvs_per_year`: Takes a 2-column input file. See example `snvs_per_year_reference.txt` below. Optional. Any `Predefined_lineage_cluster` not represented here will default to the `general_snvs_per_year` value
+- `--snvs_per_mb`: How many SNVs per megabases (Mb). Defaults to 5.
+- `--mash_threshold`: For initial single-linkage clustering and to reduce amount of pairwise kbo comparisons. Default to 0.0006, but consider making smaller for HIGHLY related species.
+- `--general_snvs_per_year`: How many SNVs per year (generally) for the species you are trying to calculate outbreak SNV clusters for. Not required.
+- `--lineage_specific_snvs_per_year`: Takes a 2-column input file. See example `snvs_per_year_reference.txt` below. Optional. Any `Predefined_lineage_cluster` not represented here will default to the `general_snvs_per_year` value. Not required.
 
 ### genome_manifest.txt
 
@@ -141,6 +145,7 @@ Column descriptions:
 See [Installation](#installation) for specific instructions 
 - mamba/conda
 - kbo-cli=0.2.1
+- mash=2.2
 - networkx=3.5
 - polars=1.33.1
 
