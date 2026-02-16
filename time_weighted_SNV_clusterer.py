@@ -379,7 +379,7 @@ def get_args():
     parser.add_argument("--lineage_specific_snvs_per_year", type=str)
     parser.add_argument("--snvs_per_mb", type=float, default=5.0)
     parser.add_argument("--vcf", action="store_true")
-    parser.add_argument("--mash_threshold", type=float, default=1e-5, help="Mash distance threshold for prefiltering genome pairs")
+    parser.add_argument("--mash_threshold", type=float, default=0.0006, help="Mash distance threshold for prefiltering genome pairs")
     return parser.parse_args()
 
 
