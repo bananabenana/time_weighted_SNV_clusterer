@@ -1,5 +1,5 @@
 # time_weighted_SNV_clusterer
-Cluster genomes into Single Nucleotide Variant (SNV) outbreak clusters based on user-defined parameters, taking into account the mutation rate over time. SNV == SNP.
+Cluster genomes into Single Nucleotide Variant (SNV) outbreak clusters based on user-defined parameters, taking into account the mutation rate over time.
 
 ## Motivation
 SNV or SNP analysis for detecting pathogen outbreaks often uses hard, defined SNV thresholds. This doesn't really make sense when considering the natural mutation rate of bacteria over time. `time_weighted_SNV_clusterer.py` seeks to address this, by taking into account yearly mutation rates, allowing users to define not only the `general_snvs_per_year`, but `lineage_specific_snvs_per_year` and `snvs_per_mb` thresholds. This information is used along with date of isolation for each genome and genome size, allowing more flexible SNV thresholds. This is optional however - dates and mutations over time can be ignored.
