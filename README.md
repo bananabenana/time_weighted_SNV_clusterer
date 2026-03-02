@@ -4,7 +4,8 @@ Cluster genomes into Single Nucleotide Variant (SNV) outbreak clusters based on 
 ## Motivation
 SNV or SNP analysis for detecting pathogen outbreaks often uses hard, defined SNV thresholds. This doesn't really make sense when considering the natural mutation rate of bacteria over time. `time_weighted_SNV_clusterer.py` seeks to address this, by taking into account yearly mutation rates, allowing users to define not only the `general_snvs_per_year`, but `lineage_specific_snvs_per_year` and `snvs_per_mb` thresholds. This information is used along with date of isolation for each genome and genome size, allowing more flexible SNV thresholds. This is optional however - dates and mutations over time can be ignored.
 
-To save time, only comparisons between genomes of the same predefined lineage clusters are performed. Assign these any way you want (Sequence Type, cgMLST, MASH clusters, species etc.). The tool also performs a pre-filtering all-vs-all single-linkage step using MASH to reduce the number of pairs to be handled by kbo.
+To save time, only comparisons between genomes of the same predefined lineage clusters are performed. Assign these any way you want (Sequence Type, cgMLST, MASH clusters, species etc.). The tool also performs a pre-filtering all-vs-all single-linkage step using MASH to reduce the number of pairs to be handled by kbo. The tool also reduces the number of pairwise comparisons via a graph-based K-Nearest Neighbour approach.
+
 
 ## Installation
 ```bash
@@ -31,7 +32,8 @@ python time_weighted_SNV_clusterer.py \
   --manifest test_data/input/genome_manifest.txt \
   --outdir test_data/output \
   --snvs_per_mb 5 \
-  --mash_threshold 0.0006 \
+  --mash_threshold 0.0008 \
+  --knn_k 10 \
   --general_snvs_per_year 3.8 \
   --lineage_specific_snvs_per_year test_data/input/snvs_per_year_reference.txt \
   --threads 4
@@ -50,13 +52,57 @@ python time_weighted_SNV_clusterer.py \
   --vcf
 ```
 
+If you don't have dates, you can just remove the `--general_snvs_per_year` and `--lineage_specific_snvs_per_year` arguments
+```bash
+python time_weighted_SNV_clusterer.py \
+  --manifest test_data/input/genome_manifest.txt \
+  --outdir test_data/output \
+  --snvs_per_mb 5 \
+  --mash_threshold 0.0008 \
+  --knn_k 10 \
+  --threads 4
+```
+
+If you don't have pre-defined lineage/ST information, you can do all-vs-all using MASH to guide the pairwise SNV comparisons.
+This will do more comparisons and will be slower. Use the `--all_vs_all` flag
+```bash
+python time_weighted_SNV_clusterer.py \
+  --manifest test_data/input/genome_manifest.txt \
+  --outdir test_data/output \
+  --snvs_per_mb 5 \
+  --mash_threshold 0.0008 \
+  --all_vs_all \ # <-- note this line
+  --threads 4
+```
+
+If you want to just do all-vs-all based on your manifest file and pre-defined lineage/STs.
+This will be very slow and perform all-vs-all, making many comparisons. I feel this is 
+usually unneeded, but in case you want to run it use the `--manifest_all_vs_all` flag
+```bash
+python time_weighted_SNV_clusterer.py \
+  --manifest test_data/input/genome_manifest.txt \
+  --outdir test_data/output \
+  --snvs_per_mb 5 \
+  --mash_threshold 0.0008 \
+  --manifest_all_vs_all \ # <-- note this line
+  --threads 4
+```
+
 ## Inputs
 You want to provide the following:
 - `--manifest`: Takes a 4-column input file. See example `genome_manifest.txt` below
 - `--snvs_per_mb`: How many SNVs per megabases (Mb). Defaults to 5.
-- `--mash_threshold`: For initial single-linkage clustering and to reduce amount of pairwise kbo comparisons. Default to 0.0006, but consider making smaller for HIGHLY related species.
+- `--mash_threshold`: For initial single-linkage clustering and to reduce amount of pairwise kbo comparisons. Default to 0.0008, but consider making
+smaller for HIGHLY related species.
 - `--general_snvs_per_year`: How many SNVs per year (generally) for the species you are trying to calculate outbreak SNV clusters for. Not required.
-- `--lineage_specific_snvs_per_year`: Takes a 2-column input file. See example `snvs_per_year_reference.txt` below. Optional. Any `Predefined_lineage_cluster` not represented here will default to the `general_snvs_per_year` value. Not required.
+- `--lineage_specific_snvs_per_year`: Takes a 2-column input file. See example `snvs_per_year_reference.txt` below. Optional.
+Any `Predefined_lineage_cluster` not represented here will default to the `general_snvs_per_year` value. Not required.
+- `--knn_k 10`: Number of K-Nearest Neighbours (KNN) are checked per node. This is used to reduce the total number of pairwise comparisons making accurate
+SNV clustering really fast. Default to 10. Higher values = more comparisons per genome and more time, but benefit levels off quickly >10.
+- `--manifest_all_vs_all`: All-vs-all comparison between all genomes, based on your manifest file and pre-defined lineage/STs. No MASH or KNN pre-filtering.
+Slow due to more comparisons.
+- `--all_vs_all`: Uses MASH to guide and reduce number of pairwise comparisons bsaed on the `--mash_threshold`. Can be used if you don't want to run KNN.
+I don't know why I hard coded this, but it's an option if you want it. Middle ground slowness.
 
 ### genome_manifest.txt
 
