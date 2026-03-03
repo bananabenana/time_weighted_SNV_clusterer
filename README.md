@@ -63,8 +63,8 @@ python time_weighted_SNV_clusterer.py \
   --threads 4
 ```
 
-If you don't have pre-defined lineage/ST information, you can do all-vs-all using MASH to guide the pairwise SNV comparisons.
-This will do more comparisons and will be slower. Use the `--all_vs_all` flag
+If you don't want to do the KNN apporoach or have pre-defined lineage/ST information, you can do all-vs-all using MASH to guide the pairwise SNV comparisons.
+This will do more comparisons and will be slower. Use the `--all_vs_all` flag. This skips the KNN step.
 ```bash
 python time_weighted_SNV_clusterer.py \
   --manifest test_data/input/genome_manifest.txt \
@@ -77,7 +77,7 @@ python time_weighted_SNV_clusterer.py \
 
 If you want to just do all-vs-all based on your manifest file and pre-defined lineage/STs.
 This will be very slow and perform all-vs-all, making many comparisons. I feel this is 
-usually unneeded, but in case you want to run it use the `--manifest_all_vs_all` flag
+usually unneeded, but in case you want to run it use the `--manifest_all_vs_all` flag. This skips the MASH and KNN steps.
 ```bash
 python time_weighted_SNV_clusterer.py \
   --manifest test_data/input/genome_manifest.txt \
